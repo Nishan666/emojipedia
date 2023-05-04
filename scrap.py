@@ -84,7 +84,7 @@ print(content)
 
 # creating the file -> emojipedia.js(javascript file) 
 # encoding='utf-8' must be used ,or else emoji will be rendered as /%ed3233e4
-with open('../emojipedia.js', 'w' ,encoding='utf-8') as f: 
+with open('emojipedia.js', 'w' ,encoding='utf-8') as f: 
 
     # write the componets that is needed for react use
     f.write('const emojipedia =\n')   
@@ -107,13 +107,13 @@ with open('../emojipedia.js', 'w' ,encoding='utf-8') as f:
 # basically removing quotes from key (of key,value pair)
 
 # opening the file in read mode
-with open('../emojipedia.js', 'r') as file:
+with open('emojipedia.js', 'r') as file:
     data = file.read()
     data = data.replace('"emoji"', "emoji").replace('"id"',"id").replace('"name"',"name").replace('"meaning"',"meaning")
     # updated data is stored in data variable
 
 # opening the file in write mode
-with open('../emojipedia.js', 'w') as file:
+with open('emojipedia.js', 'w') as file:
     file.write(data)
       
 # #####################################################
