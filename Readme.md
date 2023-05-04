@@ -1,5 +1,9 @@
-# Emojipedia
+# Emojipedia🤗 
 
-## pip install -r /path/to/requirements.txt
+```
+pip install -r requirements.txt
+```
 
-## python3 scrap.py
+```
+python3 scrap.py
+```
