@@ -6,6 +6,7 @@ emojipedia.js
 
 # for react
 .DS_STORE
+/React-app/node_modules
 node_modules
 scripts/flow/*/.flowconfig
 .flowconfig
