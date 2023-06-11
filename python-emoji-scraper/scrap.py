@@ -23,6 +23,11 @@ emoji_site_links= ["https://www.emojimeanings.net/list-animals-nature-whatsapp",
 # here for loop is used to traverse throught every catagory of emoji from emoji_site_links array
 for URL in emoji_site_links:
 
+    # the below code is used to get only the main name from the url,to use it as category
+    start_index = URL.find("list-") + len("list-")
+    end_index = URL.find("-whatsapp")
+    category = URL[start_index:end_index]
+
     # getting html data fromm url
     page = requests.get(URL)
 
@@ -47,7 +52,8 @@ for URL in emoji_site_links:
     # link1->img-src(link)
     # link2->meaning of emoji
     # link3->title(it has both title and image)
-    for link1 , link2 , link3 in zip(imgs , meanings , title) :
+    # link4->category
+    for link1 , link2 , link3 ,link4 in zip(imgs , meanings , title , category) :
             
             # below using for loop we separate(split) emoji & title and store it in emoji and title
             ##############
@@ -72,7 +78,8 @@ for URL in emoji_site_links:
                         'id' : counts,
                         'emoji': emoji,
                         'name' : title,
-                        'meaning' : meaning
+                        'meaning' : meaning,
+                        'category' : category,
                         }
             
             # adding(appending) created object to an array
@@ -109,7 +116,7 @@ with open('../React-app/src/emojipedia.js', 'w' ,encoding='utf-8') as f:
 # opening the file in read mode
 with open('../React-app/src/emojipedia.js', 'r') as file:
     data = file.read()
-    data = data.replace('"emoji"', "emoji").replace('"id"',"id").replace('"name"',"name").replace('"meaning"',"meaning")
+    data = data.replace('"emoji"', "emoji").replace('"id"',"id").replace('"name"',"name").replace('"meaning"',"meaning").replace('"category"',"category")
     # updated data is stored in data variable
 
 # opening the file in write mode

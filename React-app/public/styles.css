@@ -81,3 +81,31 @@ dd dl {
 dd dl .term {
   margin-bottom: 1rem;
 }
+
+
+
+
+
+/* For pagination  */
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination button {
+  color: black;
+  background-color: #4CAF50;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination button.active {
+  background-color: #4CAF50;
+  color: rgb(161, 38, 38);
+  border-radius: 5px;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #8f31b4;
+  border-radius: 5px;
+}
