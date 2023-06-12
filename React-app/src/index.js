@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 ReactDOM.render(
-<BrowserRouter>
+<BrowserRouter basename={process.env.PUBLIC_URL}>
 <ScrollToTop />
 <App />
 </BrowserRouter>

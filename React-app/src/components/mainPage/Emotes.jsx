@@ -21,7 +21,7 @@ function Emotes(props) {
         </span>
         <span >{props.name}</span>
       </dt>
-      <dd>{props.meaning.substring( 0, 200)}{props.meaning.length < 200 ?  '':'.....'}</dd>
+      <dd>{props.meaning.substring( 0, 100)}{props.meaning.length < 100 ?  '':'.....'}</dd>
     </div>
   );
 }

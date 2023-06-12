@@ -1,19 +1,26 @@
 {
   "name": "mapping-components-practice",
+  "homepage": "https://nishan666.github.io/emojipedia",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "env-cmd": "^10.1.0",
+    "gh-pages": "^5.0.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.12.1",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "typescript": "3.3.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
