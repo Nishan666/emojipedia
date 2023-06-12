@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da172d5ceac9e96f4c36184c913b623e",
+    "revision": "79dd6a64d3f0b098e5e1f34cbb19d545",
     "url": "/emojipedia/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/emojipedia/static/js/2.9dc37305.chunk.js"
   },
   {
-    "revision": "0612de1de8a0756a003d",
-    "url": "/emojipedia/static/js/main.a22625c4.chunk.js"
+    "revision": "190f34469a940c9b1f64",
+    "url": "/emojipedia/static/js/main.52676614.chunk.js"
   },
   {
     "revision": "3ad02f26d7c433e7efca",
