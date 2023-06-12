@@ -1,0 +1,204 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.666;
+  background: #c0d2d4;
+  color: #555;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 500%;
+  text-align: center;
+  margin-top: 4rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.headingSpan{
+  padding: 5px 15px;
+  background: #2ec2b0;
+  border-radius: 2%;
+  cursor: pointer;
+}
+
+.dictionary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 4rem auto;
+  max-width: 90%;
+}
+
+.dictionary > .term {
+  text-align: center;
+  max-width: 20rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 100ms ease-in-out;
+}
+
+.dictionary > .term > dt {
+  margin-bottom: 1rem;
+}
+
+dt {
+  color: #2ec2b0;
+  line-height: 1;
+}
+
+dt span {
+  font-size: 200%;
+  font-weight: 900;
+}
+
+.emoji {
+  margin: 0 auto 20px;
+  display: block;
+  font-size: 400%;
+}
+
+dd {
+  font-size: 92.5%;
+  margin-left: 0;
+}
+
+dd dt {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: inherit;
+}
+
+dd dl {
+  font-size: 90%;
+  margin: 1rem auto 0 auto;
+  letter-spacing: 0.33px;
+  max-width: 15rem;
+}
+
+dd dl .term {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+/* For pagination  */
+
+.pagination {
+  display: inline-block;
+}
+
+.unClicked{
+  color: rgb(12, 141, 228);
+  background-color: #c8daee;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: .1rem;
+}
+
+.pagination button.active {
+  background-color: #4CAF50;
+  color: rgb(126, 79, 79);
+  border-radius: 5px;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #0bc4c4;
+  border-radius: 5px;
+}
+
+.clickedBTN{
+  color: rgb(0, 57, 95);
+  background-color: #89befa;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: .1rem;
+}
+
+
+/* Search Input */
+
+.search{
+  text-align: center;
+}
+
+.searchInput{
+  justify-content: center;
+  width: 30%;
+  text-align: center;
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: .5rem;
+}
+
+
+/* details */
+
+.mainEmoji{
+  border: #2ec2b0 double 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin:5rem;
+  margin-top: 0;
+}
+
+.catEmoji{
+  font-size: 2rem;
+  text-align: right;
+  margin-bottom: 1rem;
+  color: #64ffff;
+  padding: .5rem;
+}
+
+.picEmoji{
+  border-radius: 100%;
+  background-color: #2ec2b0;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.picSpan{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tileEmoji{
+  margin: 1rem auto;
+  text-align: center;
+  width: 70%;
+  border-radius: 25px;
+  background-color: #fff;
+  font-weight: 900;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 5rem;
+  color: #2ec2b0;
+}
+
+.meaningEmoji{
+  padding: 3rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+.catSpan{
+  opacity: 50%;
+}
+
+.backBTN{
+  width: 20%;
+  margin: 2rem;
+  font-size: 3rem;
+  border-radius: 10px;
+  background-color:#c8daee;
+  color:#89befa;
+}
