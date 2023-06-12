@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Emotes from "./Emotes";
-import emojipedia from "../emojipedia";
 import Pagination from "./Pagination";
 import Search from "./Search";
+
+import {EmojipediaSearch , EmojipediaSSetearch} from "../App"
+
 
 function createEmotes(emojis) {
   return (
@@ -15,10 +17,11 @@ function createEmotes(emojis) {
   );
 }
 
-function Entrys() {
+const Entrys = ()=> {
   const [page , setPage] = useState(1);
 
-  const [serach , setSearch] = useState(emojipedia);
+  const serach = useContext(EmojipediaSearch);
+  const setSearch = useContext(EmojipediaSSetearch);
 
   const total = Math.round(serach.length / 30);
 

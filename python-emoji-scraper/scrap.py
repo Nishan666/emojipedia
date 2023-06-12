@@ -53,7 +53,7 @@ for URL in emoji_site_links:
     # link2->meaning of emoji
     # link3->title(it has both title and image)
     # link4->category
-    for link1 , link2 , link3 ,link4 in zip(imgs , meanings , title , category) :
+    for link1 , link2 , link3  in zip(imgs , meanings , title ) :
             
             # below using for loop we separate(split) emoji & title and store it in emoji and title
             ##############
@@ -79,7 +79,7 @@ for URL in emoji_site_links:
                         'emoji': emoji,
                         'name' : title,
                         'meaning' : meaning,
-                        'category' : category,
+                        'category' : category
                         }
             
             # adding(appending) created object to an array
