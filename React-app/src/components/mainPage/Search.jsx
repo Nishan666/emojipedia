@@ -26,6 +26,7 @@ const Search = (props) => {
     }
 
     return (<div className="search">
+        {/* search bar */}
         <input className="searchInput" type="text" placeholder="Search.." onChange={handleChange} onKeyDown={handleKeyDown}></input>
     </div>)
 }
