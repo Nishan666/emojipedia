@@ -1,43 +1,33 @@
-import React , {useContext} from "react";
+import React, { useContext } from "react";
 import emojipedia from "../../emojipedia";
+import { EmojiArray, SetEmojiArray } from "../App"
 
+// for Search bar and its property 
+// props ->setPage
+const Search = (props) => {
+    const emojis= useContext(EmojiArray);
+    const setEmojis = useContext(SetEmojiArray);
 
-import {EmojipediaSearch , EmojipediaSSetearch} from "../App"
-
-const Search = (props)=>{
-
-    const serach = useContext(EmojipediaSearch);
-    const setSearch = useContext(EmojipediaSSetearch);
-
-    const handleKeyDown = (event)=>{
-
+    // onclick of backspace repopulate the search Array will all the data 
+    const handleKeyDown = (event) => {
         if (event.key === 'Backspace') {
-            setSearch(emojipedia);
-            // console.log("backspace");
+            setEmojis(emojipedia);
         }
     }
 
 
-    const handleChange = async (event)=>{
+    const handleChange = async (event) => {
         const change = event.target.value;
-
-        const result = serach.filter((x)=>{return x.name.toLowerCase().includes(change.toLowerCase())})
-
-        // working 
-        // emojipedia.forEach((x)=>{
-        //     if(x.name.toLowerCase().includes(tag)){
-        //     console.log(x.name);
-        //     }
-        // })
-        // console.log(result);
-
-        props.setSearch(result)
+        // result is an array with matching name as with inputed value
+        const result = emojis.filter((x) => { return x.name.toLowerCase().includes(change.toLowerCase()) })
+        // reset emoji Array
+        setEmojis(result)
         props.setPage(1)
     }
 
     return (<div className="search">
- <input className="searchInput" type="text" placeholder="Search.." onChange={handleChange} onKeyDown={handleKeyDown}></input>
-</div>)
+        <input className="searchInput" type="text" placeholder="Search.." onChange={handleChange} onKeyDown={handleKeyDown}></input>
+    </div>)
 }
 
 export default Search;

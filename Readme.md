@@ -1,5 +1,7 @@
 # Emojipedia🤗 
 
+## LIVE ON THE WEB
+[Emojipedia](https://nishan666.github.io/emojipedia/)
 
 ## Scrap emoji 
 ```
@@ -20,3 +22,4 @@ npm install
 ```
 npm start
 ```
+

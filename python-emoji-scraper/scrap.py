@@ -104,7 +104,7 @@ with open('../React-app/src/emojipedia.js', 'w' ,encoding='utf-8') as f:
 
 
 # ###################################################
-# making id , emoji , name , meaning as variable
+# making id , emoji , name , meaning , catagory  as variable
 # i.e., 'id':46,
 #       'name':'happy'
 # to
